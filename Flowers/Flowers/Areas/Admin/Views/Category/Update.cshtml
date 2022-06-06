@@ -1,0 +1,9 @@
+﻿@model FlowerCategory
+<form method="post" action="">
+  <div class="mb-3" style="width:20%">
+    <label asp-for="CategoryName" class="form-label">New category</label>
+    <input asp-for="CategoryName" class="form-control"  aria-describedby="emailHelp">
+    <span asp-validation-for="CategoryName" class="text-danger" style="z-index:1"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

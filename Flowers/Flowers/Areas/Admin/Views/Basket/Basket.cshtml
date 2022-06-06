@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BasketFlower>
+@{
+    int count = 0;
+}
+<div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Bordered table</h4>
+                    <p class="card-description"> Add class <code>.table-bordered</code>
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th> # </th>
+                            <th> FlowerName </th>
+                            <th> Price </th>
+                            <th> Count </th>
+                            <th> Total Price </th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @foreach (var item in Model)
+                        {
+                            count++;
+                            float total = @item.FlowerPricing * @item.Count;
+                            <tr>
+                            <td> @count </td>
+                            <td> @item.Flowername </td>
+                            <td> @item.FlowerPricing </td>
+                            <td> @item.Count</td>
+                            <td> @total </td>
+                            <td> <a asp-controller="Basket" asp-action="DeleteBasket" asp-route-id="@item.Id"><i class="mdi mdi-delete"></i></a> </td>
+                          </tr>
+                         }
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>

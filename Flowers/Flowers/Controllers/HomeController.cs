@@ -18,7 +18,7 @@ namespace Flowers.Controllers
         }
         public IActionResult Index()
         {
-            List<Flower> flowers = _context.FlowerCard.ToList();
+            List<Flower> flowers = _context.FlowerCard.Include(p=>p.Category).ToList();
             List<FlowerCategory> category = _context.Category.ToList();
             HomeViewModel homeVM = new HomeViewModel 
             { 

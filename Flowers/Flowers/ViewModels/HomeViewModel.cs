@@ -5,7 +5,7 @@ namespace Flowers.ViewModels
 {
     public class HomeViewModel
     {
-        public List<Flower> Flowers { get; set; } 
-        public List<FlowerCategory> Category { get; set; }
+        public IEnumerable<Flower> Flowers { get; set; } 
+        public IEnumerable<FlowerCategory> Category { get; set; }
     }
 }

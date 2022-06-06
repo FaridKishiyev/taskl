@@ -44,7 +44,7 @@
                                     <li><a href="" data-id="all">All</a></li>
                                     @foreach (var item in Model.Category)
                                    {
-                                       <li><a href="" data-id="@item.CategoryName">@item.CategoryName</a></li>
+                                       <li><a href="" data-id="@item.CategoryName.ToLower()">@item.CategoryName</a></li>
                                    }
                                    
                                 </ul>
@@ -52,12 +52,10 @@
                         </ul>
                         <ul class="category d-none d-md-flex list-unstyled">
                             <li><a href="" data-id="all">All</a></li>
-                            <li><a href="" data-id="popular">Popular</a></li>
-                            <li><a href="" data-id="winter">Winter</a></li>
-                            <li><a href="" data-id="various">Various</a></li>
-                            <li><a href="" data-id="exotic">Exotic</a></li>
-                            <li><a href="" data-id="green">Greens</a></li>
-                            <li><a href="" data-id="cactuse">Cactuses</a></li>
+                             @foreach (var item in Model.Category)
+                                   {
+                                       <li><a href="" data-id="@item.CategoryName.ToLower()">@item.CategoryName</a></li>
+                                   }
                         </ul>
                         <ul class="list-unstyled">
                             <li>
@@ -71,7 +69,7 @@
                     @foreach (var item in Model.Flowers)
                    {
                     <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                        <div class="product-item text-center" data-id="popular">
+                        <div class="product-item text-center" data-id="@item.Category.CategoryName.ToLower()">
                             <div class="img">
                                 <a href="">
                                     <img src="~/assets/img/@item.FlowerImg" class="img-fluid" alt="">
@@ -81,7 +79,9 @@
                                 <h6>@item.Flowername</h6>
                             </div>
                             <div class="price">
-                                <span class="text-black-50">Add to cart</span>
+                                <a asp-area="Admin" asp-controller="Basket" asp-action="Addbasket" asp-route-id="@item.Id">
+                                    <span class="text-black-50">Add to cart</span>
+                                </a>
                                 <span class="text-black-50">$@item.FlowerPricing</span>
                             </div>
                         </div>

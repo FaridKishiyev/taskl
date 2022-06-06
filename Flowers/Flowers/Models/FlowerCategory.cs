@@ -9,6 +9,6 @@ namespace Flowers.Models
         [Required]
         public string CategoryName { get; set; }
 
-
+        public IEnumerable<Flower> Flower { get; set; }
     }
 }

@@ -56,7 +56,8 @@ namespace Flowers.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
-            return View();  
+            List<FlowerCategory> category = _context.Category.ToList();
+            return View(category);  
         }
         [HttpPost]
         public IActionResult Create(string Name,string Desc)

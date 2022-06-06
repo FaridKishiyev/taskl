@@ -5,8 +5,11 @@
         public int Id { get; set; }
         public string Flowername { get; set; }
         public string FlowerImg { get; set; }
-        public int FlowerPricing { get; set; }
+        public float FlowerPricing { get; set; }
         public string FlowerDescription { get; set; }
-        public int FlowerCategory { get; set; }
+        public int Count { get; set; }
+
+        public int FlowerCategoryId { get; set; }
+        public FlowerCategory Category { get; set; }
     }
 }

@@ -25,7 +25,10 @@ namespace Flowers.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FlowerCategory")
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FlowerCategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("FlowerDescription")
@@ -34,13 +37,15 @@ namespace Flowers.Migrations
                     b.Property<string>("FlowerImg")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FlowerPricing")
-                        .HasColumnType("int");
+                    b.Property<float>("FlowerPricing")
+                        .HasColumnType("real");
 
                     b.Property<string>("Flowername")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FlowerCategoryId");
 
                     b.ToTable("FlowerCard");
                 });
@@ -53,11 +58,21 @@ namespace Flowers.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CategoryName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("Flowers.Models.Flower", b =>
+                {
+                    b.HasOne("Flowers.Models.FlowerCategory", "Category")
+                        .WithMany("Flower")
+                        .HasForeignKey("FlowerCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
