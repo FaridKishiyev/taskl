@@ -1,0 +1,41 @@
+﻿@using fiorello.Models
+@model IEnumerable<Flowers>
+@{
+    int count = 0;
+}
+<div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Bordered table</h4>
+                    <p class="card-description"> Add class <code>.table-bordered</code>
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th> # </th>
+                            <th> Flower </th>
+                            <th> Pricing </th>
+                            <th> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         @foreach (var item in Model)
+                        {
+                            count++;
+                             <tr>
+                            <td> @count </td>
+                            <td> @item.FlowerName </td>
+                            <td> @item.FlowerPricing </td>
+                            <td> <a class="btn btn-danger" asp-controller="Flowers" asp-action="Delete" asp-root-id="@item.Id">Delete</a> 
+                                <a class="btn btn-primary" asp-controller="Flowers" asp-action="Update" asp-root-id="@item.Id">Update</a>
+                                <a class="btn btn-info" asp-controller="Flowers" asp-action="Detail" asp-root-id="@item.Id">Detail</a></td>
+                          </tr>
+                        }
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>

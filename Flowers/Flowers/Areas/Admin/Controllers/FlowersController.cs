@@ -64,5 +64,13 @@ namespace Flowers.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult SearchFlower(string search)
+        {
+
+            List<Flower> flower = _context.FlowerCard.Where(p => p.Flowername.ToLower().Contains(search.ToLower())).ToList();   
+
+            return PartialView("_Search", flower);
+        }
     }
 }

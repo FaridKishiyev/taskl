@@ -2,6 +2,18 @@ $(document).ready(function () {
 
     // HEADER
 
+    $(document).on("keyup", "#search-input", function () {
+        let inputVal = $(this).val().trim();
+        $("#searchList").slice(1).remove();
+        $.ajax({
+            method: "get",
+            url: "flowers/SearchFlower?search=" + inputVal,
+            success: function (res) {
+                $("#searchList").append(res);
+            }
+        })
+    })
+
     $(document).on('click', '#search', function () {
         $(this).next().toggle();
     })
