@@ -1,0 +1,41 @@
+#top-seller {
+  margin: 70px 0px;
+  .top-seller-head {
+    text-align: center;
+  }
+  .seller-area-1 {
+    overflow: hidden;
+    img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  .seller-area-2 {
+    height: 400px;
+    position: relative;
+    .row {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .sp-3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .sp-4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .top-seller-img {
+    img {
+      height: 150px;
+    }
+  }
+  .seller-product {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+}

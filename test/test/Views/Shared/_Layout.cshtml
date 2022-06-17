@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/assets/css/index.css">
+    <title>Document</title>
+</head>
+<body> 
+    <header>
+        <nav>
+            <section id="navbar-intro">
+                <div class="container">
+                    <div class="nav-intro-left">
+                        <h2>Welcome to Juan online store</h2>
+                    </div>
+                    <div class="nav-intro-right">
+                        <div class="currency">
+                            <ul class="currency-ul">
+                                <li class="main-li">$ Dollar (US)
+                                    <ul class="li-element">
+                                        <li>USD</li>
+                                        <li>EURO</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="laguange">
+                            <ul class="laguange-ul">
+                                <li class="main-li">English
+                                    <ul class="li-element">
+                                        <li>English</li>
+                                        <li>French</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="navbar">
+                <div class="container ">
+                    <div class="row main-navbar">
+                        <div class="col-3">
+                            <div class="navbar-logo">
+                                <img src="~/assets/img/logo/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6 navbar-middle">
+                            <div class="navbar-menu">
+                                <ul class="main-menu">
+                                    <li class="main-menu-item">HOME <i class="fa-solid fa-angle-down"></i></li>
+                                    <li class="main-menu-item">PAGES <i class="fa-solid fa-angle-down"></i></li>
+                                    <li class="main-menu-item">SHOP <i class="fa-solid fa-angle-down"></i></li>
+                                    <li class="main-menu-item">BLOG <i class="fa-solid fa-angle-down"></i></li>
+                                    <li class="main-menu-item">CONTACT US</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="navbar-assets">
+                                <ul class="assets-ul">
+                                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                                    <li><i class="fa-solid fa-gear"></i></li>
+                                    <li><i class="fa-solid fa-basket-shopping"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+        @RenderBody()
+ <footer>
+        <div class="footer-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <h2>My Account</h2>
+                        <p><i class="fa-solid fa-location-dot"></i> 184 Main Rd E, St Albans VIC 3021, Australia</p>
+                        <p><i class="fa-solid fa-envelope"></i>s<span>Mail Us:</span>yourmail@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i><span>Phone:</span>+ 00 254 254565</p>
+                    </div>
+                    <div class="col-2">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li><a href="">Ecommerce</a></li>
+                            <li><a href="">Shopify</a></li>
+                            <li><a href="">Prestashop</a></li>
+                            <li><a href="">Opencart</a></li>
+                            <li><a href="">Magento</a></li>
+                            <li><a href="">Jigoshop</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h2>Information</h2>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Returns & Exchanges</a></li>
+                            <li><a href="">Shipping & Delivery</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="">Store Location</a></li>
+                            <li><a href="">My Account</a></li>
+                            <li><a href="">Orders Tracking</a></li>
+                            <li><a href="">Size Guide</a></li>
+                            <li><a href="">Shopping Rates</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-end">
+                <div class="container">
+                    <span>Copyright 2019 Juan. All Rights Reserved</span>
+                    <div class="social-platforma">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        
+    </footer>
+    <!-- JS FILE -->
+    <script src="~/assets/js/index.js"></script>
+</body>
+</html>
