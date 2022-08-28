@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220819165518_shopping.cs" />
+    <Compile Remove="Migrations\20220819165518_shopping.Designer.cs" />
+    <Compile Remove="Migrations\20220819205550_shopping.cs" />
+    <Compile Remove="Migrations\20220819205550_shopping.Designer.cs" />
+    <Compile Remove="Migrations\20220819213706_shopping.cs" />
+    <Compile Remove="Migrations\20220819213706_shopping.Designer.cs" />
+    <Compile Remove="Migrations\20220819213958_shopping.cs" />
+    <Compile Remove="Migrations\20220819213958_shopping.Designer.cs" />
+    <Compile Remove="Migrations\20220820141219_basket.cs" />
+    <Compile Remove="Migrations\20220820141219_basket.Designer.cs" />
+    <Compile Remove="Migrations\20220820141310_basket.cs" />
+    <Compile Remove="Migrations\20220820141310_basket.Designer.cs" />
+    <Compile Remove="Migrations\20220826172007_message.cs" />
+    <Compile Remove="Migrations\20220826172007_message.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\admin\assets\scss\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,77 @@
+﻿@model RegisterVM 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="~/assets/css/loginRegister.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Register Form</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked />
+                <input type="radio" name="slide" id="signup" />
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Register</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form method="post"  asp-action="Login" class="login">
+                    <div class="field">
+                        <input name="emailAdres" type="text" placeholder="Email Address" required />
+                    </div>
+                    <div class="field">
+                        <input name="password" type="password" placeholder="Password" required />
+                    </div>
+                    <div class="pass-link"><a href="#">Forgot password?</a></div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login" />
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="">Register</a>
+                    </div>
+                </form>
+                <form method="post" asp-action="Register" class="signup">
+                    <div class="field">
+                        <input asp-for="Fullname" type="text" placeholder="Full Name" required />
+                        <span asp-validation-for="Fullname"></span>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Username" type="text" placeholder="UserName" required />
+                        <span asp-validation-for="Username"></span>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Email" type="text" placeholder="Email Address" required />                        
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Password" type="password" placeholder="Password" required />
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                    <div class="field">
+                        <input asp-for="CheckPassword" type="password" placeholder="Confirm password" required />
+                        <span asp-validation-for="CheckPassword"></span>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Register" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS  -->
+    <script src="~/assets/js/loginregister.js"></script>
+</body>
+</html>

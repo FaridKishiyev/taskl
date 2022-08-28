@@ -1,0 +1,12 @@
+﻿@model Mark
+
+<div class="content-item">
+    <div class="card" style="width: 18rem;">
+  <img src="~/assets/img/@Model.ImageString"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">@Model.BrandName</h5>
+    <p class="card-text">@Model.BrandDesc</p>
+    <a asp-controller="brand" asp-action="Index" class="btn btn-primary">Geri</a>
+  </div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+﻿@model Mark
+
+<div class="content-item">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="BrandName" class="form-label">Adı</label>
+            <input type="text" class="form-control" asp-for="BrandName" placeholder="Example input placeholder">
+        </div>
+        <div class="mb-3">
+            <label asp-for="BrandDesc" class="form-label">Haqqında</label>
+            <input type="text" class="form-control" asp-for="BrandDesc" placeholder="Another input placeholder">
+        </div>
+        <div class="mb-3">
+            <label asp-for="ImageUrl" class="form-label">Logo</label>
+            <input class="form-control" type="file" asp-for="ImageUrl">
+        </div> 
+        <button type="submit" class="btn btn-primary">Yarat</button>
+    </form>
+</div>
+

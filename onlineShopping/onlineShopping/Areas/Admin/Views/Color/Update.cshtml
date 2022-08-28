@@ -1,0 +1,15 @@
+﻿@model Color
+<div class="content-item">
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="ColorName" class="form-label">Example label</label>
+            <input type="text" class="form-control" asp-for="ColorName" placeholder="Rəng adı" value="@Model.ColorName">
+        </div>
+        <div class="mb-3">
+            <label asp-for="ColorCode" class="form-label">Another label</label>
+            <input type="color" class="form-control" asp-for="ColorCode" style="width:40px;" value="@Model.ColorCode">
+        </div>
+        <button class="btn btn-primary">Yarat</button>
+    </form>
+</div>
+

@@ -1,0 +1,74 @@
+﻿@model Pagination<Product>
+@{
+    int count = @Model.CurrentCount;
+    int nextPage = @Model.PageCount + 1;
+    int prevPage = @Model.PageCount - 1;
+    int inPage = @Model.PageCount;
+   
+}
+<div class="content-item">
+
+    <a class="btn btn-primary" asp-controller="product" asp-action="created">Məhsul əlavə et</a>
+    <a class="btn btn-primary" asp-controller="product" asp-action="ProductExportExcel">Excel`ə köçürt</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Mehsul</th>
+                <th scope="col">desc</th>
+                <th scope="col">count</th>
+                <th scope="col">price</th>
+                <th scope="col">color</th>
+                <th scope="col">kateqory</th>
+                <th scope="col">size</th>
+                <th scope="col">brend</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.ProductName</td>
+                    <th>@item.ProductDesc</th>
+                    <th>@item.Count</th>
+                    <th>@item.price</th>
+                    <td>@item.color.ColorName</td>
+                    <td>@item.category.Name</td>
+                    <td>@item.size.SizeValue</td>
+                    <td>@item.mark.BrandName</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+                @if (@Model.PageCount > 1)
+                {
+                    <li class="page-item"><a class="page-link" asp-controller="product" asp-action="Index" asp-route-pageSize="@prevPage">@prevPage</a></li>
+                }
+
+                <li class="page-item"><a class="page-link" asp-controller="product" asp-action="Index" asp-route-pageSize="@inPage">@Model.PageCount</a></li>
+                <li class="page-item"><a class="page-link" asp-controller="product" asp-action="Index" asp-route-pageSize="@nextPage">@nextPage</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            
+
+
+        </ul>
+    </nav>
+</div>
+

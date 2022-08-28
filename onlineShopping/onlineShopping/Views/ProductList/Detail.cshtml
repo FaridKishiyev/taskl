@@ -1,0 +1,126 @@
+﻿@model ProductRoot
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/productDetail.css">
+</head>
+<body>
+
+    <partial name="_Menu" />
+    <main>
+        <section id="product-card">
+            <div class='container'>
+                <div class='background-element' id='background-element'>
+                </div>
+                <div class='highlight-window' id='product-img' style='background: url(https://localhost:44329/assets/img/@Model.product.ImageString)'>
+                    <div class='highlight-overlay' id='highlight-overlay' style='background: url(https://localhost:44329/assets/img/@Model.product.ImageString)'>
+                    </div>
+                </div>
+                <div class='window'>
+                    <div class='main-content'>
+                        <h2>@Model.product.mark.BrandName</h2>
+                        <h1>@Model.product.ProductName</h1>
+                        <h3>@Model.product.category.Name</h3>
+                        <div class='description' id='description'>
+                            @Model.product.ProductDesc
+                        </div>
+                        <div class='highlight-window  mobile' id='product-img' style='background: url(https://localhost:44329/assets/img/@Model.product.ImageString)'>
+                            <div class='highlight-overlay' id='highlight-overlay-mobile' style="background: url(https://localhost:44329/assets/img/@Model.product.ImageString)">
+                            </div>
+                        </div>
+                        <div class='options'>
+                            <div class='color-options'>
+                                Color:
+                                <div class='color-picker'>
+                                    <div class='color overlay' id='color-overlay'><div class='check'></div></div>
+                                    <div class='color color-a' id='color-a'></div>
+                                    <div class='color color-b' id='color-b'></div>
+                                </div>
+                                <span class='small' style='color:@Model.product.color.ColorCode'>COLOR:  <span id='color-name'>@Model.product.color.ColorName</span></span>
+
+                            </div>
+                            <div class='size-picker'>
+                                Size:
+                                <div class='range-picker' id='range-picker'>
+                                    <div>44</div><div>46</div><div>48</div><div class='active'>50</div><div>52</div><div>54</div>
+                                </div>
+                                <a class='small align-right' href='#'>VIEW SIZE-CHART</a>
+                            </div>
+                        </div>
+                        <div class='divider'></div>
+
+                        <div class='purchase-info'>
+                            <div class='price'>@Model.product.price</div>
+                            <a asp-controller="basket" asp-action="AddBasket" asp-route-id="@Model.product.Id">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <h5>Shopping</h5>
+                        <ul>
+                            <li><a href="">Haqqımızda</a></li>
+                            <li><a href="">Qaydalarımız</a></li>
+                            <li><a href="">Markalar</a></li>
+                            <li><a href="">Məhsul Kataloqu</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h5>Xüsusi məhsullar</h5>
+                        <ul>
+                            <li><a href="">Hədiyyə kartları</a></li>
+                            <li><a href="">Xüsusi qablaşdırma</a></li>
+                            <li><a href="">Özəl endirimlər</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h5>Sosyal şəbəkə</h5>
+                        <ul class="social-icons">
+                            <a href="#">
+                                <div class="icon-box">
+                            <li><i class="fab fa-facebook" aria-hidden="true"></i></li>
+                            <div>
+                                </a>
+                                <a href="#"><div class="icon-box">
+                            <li><i class="fab fa-twitter" aria-hidden="true"></i></li>
+                    </div></a>
+                    <a href="#"><div class="icon-box"><li><i class="fab fa-google-plus-g" aria-hidden="true"></i></li></div></a>
+                    <a href="#"><div class="icon-box"><li><i class="fab fa-linkedin" aria-hidden="true"></i></li></div></a>
+                    <a href="#"><div class="icon-box"><li><i class="fab fa-instagram" aria-hidden="true"></i></li></div></a>
+                    </ul>
+                </div>
+                <div class="col-3 send-message">
+                    <h5>Təklifləriniz</h5>
+                    <p>Şikayət və təklifləriniz üçün bizə müraciət edə bilərsiz</p>
+                    <a href="">Müraciət üçün</a>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/style.js"></script>
+    <script src="~/assets/js/productDetail.js"></script>
+</body>
+</html>

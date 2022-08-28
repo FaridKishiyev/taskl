@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Mark>
+@{
+    int count = 0;
+}
+<div class="content-item">
+    <a class="btn btn-primary" asp-controller="Brand" asp-action="Created">Brend əlavə et</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Logo</th>
+                <th scope="col">Brend</th>
+                <th scope="col">Haqqında</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td><img src="~/assets/img/@item.ImageString" alt="" style="width: 50px"/></td>
+                    <td>@item.BrandName</td>
+                    <td>@item.BrandDesc</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Brand" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        <a class="btn btn-danger" asp-controller="Brand" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-primary" asp-controller="Brand" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

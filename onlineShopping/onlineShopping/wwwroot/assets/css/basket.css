@@ -1,0 +1,347 @@
+main footer {
+    border-radius: 0px;
+}
+
+main .clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main #site-footer {
+    border-top-right-radius: 20%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 30%;
+}
+
+main #site-header,
+main #site-footer {
+    background: #fff;
+}
+
+main #site-header {
+    margin: 0 0 30px 0;
+}
+
+    main #site-header h1 {
+        font-size: 31px;
+        font-weight: 300;
+        padding: 40px 0;
+        position: relative;
+        margin: 0;
+    }
+
+main a {
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+}
+
+    main a:hover {
+        color: #53b5aa;
+    }
+
+main #site-header h1 span {
+    color: #53b5aa;
+}
+
+    main #site-header h1 span.last-span {
+        background: #fff;
+        padding-right: 150px;
+        position: absolute;
+        left: 217px;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    main #site-header h1:hover span.last-span,
+    main #site-header h1 span.is-open {
+        left: 363px;
+    }
+
+main #site-header h1 em {
+    font-size: 16px;
+    font-style: normal;
+    vertical-align: middle;
+}
+
+main .container {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+    width: 980px;
+}
+
+main #cart {
+    width: 100%;
+}
+
+    main #cart h1 {
+        font-weight: 300;
+    }
+
+    main #cart a {
+        color: #53b5aa;
+        text-decoration: none;
+        -webkit-transition: color 0.2s linear;
+        transition: color 0.2s linear;
+    }
+
+        main #cart a:hover {
+            color: #000;
+        }
+
+main .product.removed {
+    margin-left: 980px !important;
+    opacity: 0;
+}
+
+main .product {
+    border: 1px solid #eee;
+    margin: 20px 0;
+    width: 100%;
+    height: 195px;
+    position: relative;
+    -webkit-transition: margin 0.2s linear, opacity 0.2s linear;
+    transition: margin 0.2s linear, opacity 0.2s linear;
+}
+
+    main .product img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .product header,
+    main .product .content {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-style: none none solid none;
+        float: left;
+    }
+
+    main .product header {
+        background: #000;
+        margin: 0 1% 20px 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 24%;
+        height: 195px;
+    }
+
+        main .product header:hover img {
+            opacity: 0.3;
+        }
+
+        main .product header:hover h3 {
+            opacity: 1;
+        }
+
+        main .product header h3 {
+            opacity: 0.5;
+            background: #53b5aa;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 49px;
+            margin: 0;
+            padding: 0 30px;
+            position: absolute;
+            bottom: 23px;
+            right: 0;
+            left: 0;
+            -webkit-transition: bottom 0.2s linear;
+            transition: bottom 0.2s linear;
+        }
+
+main .remove {
+    cursor: pointer;
+}
+
+main .product .content {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 140px;
+    padding: 0 20px;
+    width: 75%;
+}
+
+main .product h1 {
+    color: #53b5aa;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 17px 0 20px 0;
+}
+
+main .product footer.content {
+    height: 50px;
+    margin: 6px 0 0 0;
+    padding: 0;
+}
+
+main .product footer .price {
+    background: #fcfcfc;
+    color: #000;
+    float: right;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 49px;
+    margin: 0;
+    padding: 0 30px;
+}
+
+main .product footer .full-price {
+    background: #53b5aa;
+    color: #fff;
+    float: right;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 49px;
+    margin: 0;
+    padding: 0 30px;
+    -webkit-transition: margin 0.15s linear;
+    transition: margin 0.15s linear;
+}
+
+main .qt,
+main .qt-plus,
+main .qt-minus {
+    display: block;
+    float: left;
+}
+
+main .qt {
+    font-size: 19px;
+    line-height: 50px;
+    width: 70px;
+    text-align: center;
+}
+
+main .qt-plus,
+main .qt-minus {
+    background: #fcfcfc;
+    border: none;
+    font-size: 30px;
+    font-weight: 300;
+    height: 100%;
+    padding: 0 20px;
+    -webkit-transition: background 0.2s linear;
+    transition: background 0.2s linear;
+}
+
+    main .qt-plus:hover,
+    main .qt-minus:hover {
+        background: #53b5aa;
+        color: #fff;
+        cursor: pointer;
+    }
+
+main .qt-plus {
+    line-height: 50px;
+}
+
+main .qt-minus {
+    line-height: 47px;
+}
+
+main #site-footer {
+    margin: 30px 0 0 0;
+}
+
+main #site-footer {
+    padding: 40px;
+}
+
+    main #site-footer h1 {
+        background: #fcfcfc;
+        border: 1px solid #ccc;
+        border-style: none none solid none;
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0 0 7px 0;
+        padding: 14px 40px;
+        text-align: center;
+    }
+
+    main #site-footer h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin: 10px 0 0 0;
+    }
+
+    main #site-footer h3 {
+        font-size: 19px;
+        font-weight: 300;
+        margin: 15px 0;
+    }
+
+main .left {
+    float: left;
+}
+
+main .right {
+    float: right;
+}
+
+main .btn {
+    background: #53b5aa;
+    border: 1px solid #999;
+    border-style: none none solid none;
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 16px 0;
+    width: 290px;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+    main .btn:hover {
+        color: #fff;
+        background: #429188;
+    }
+
+main .type {
+    background: #fcfcfc;
+    font-size: 13px;
+    padding: 10px 16px;
+    left: 100%;
+}
+
+main .type,
+main .color {
+    border: 1px solid #ccc;
+    border-style: none none solid none;
+    position: absolute;
+}
+
+main .color {
+    width: 40px;
+    height: 40px;
+    right: -40px;
+}
+
+main .red {
+    background: #cb5a5e;
+}
+
+main .yellow {
+    background: #f1c40f;
+}
+
+main .blue {
+    background: #3598dc;
+}
+
+main .minused {
+    margin: 0 50px 0 0 !important;
+}
+
+main .added {
+    margin: 0 -50px 0 0 !important;
+}
