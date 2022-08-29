@@ -11,7 +11,7 @@ using System.Linq;
 namespace onlineShopping.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize(Roles ="Admin")]
+    
     public class BrandController : Controller
     {
         private readonly AppDbContext _context;

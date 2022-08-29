@@ -8,7 +8,7 @@ using System.Linq;
 namespace onlineShopping.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize(Roles = "Admin")]
+
     public class ColorController : Controller
     {
         private readonly AppDbContext _context;
